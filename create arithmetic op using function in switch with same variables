@@ -1,0 +1,48 @@
+#include<stdio.h>
+void addition(int a,int b){
+    printf("Addition of numbers: %d",a+b);
+}
+void subtraction(int a,int b){
+    printf("Subtraction of numbers:%d",a-b);
+}
+void multiplication(int a,int  b){
+    printf("Multiplication of numbers:%d",a*b);
+}
+void division(int a,int b){
+    if(b==0)
+    printf("0 division error");
+    else
+    printf("Division of numbers: %d",a/b);
+}
+void main(){
+    printf("1.addition:\n");
+    printf("2.subtraction:\n");
+    printf("3.multiplication:\n");
+    printf("4.division:\n");
+    int choice;
+    printf("Choose a number:\n");
+    scanf("%d",&choice);
+    int a,b;
+    printf("Enter two numbers:");
+    scanf("%d%d",&a,&b);
+    switch(choice){
+    {
+    case 1:
+       addition(a,b);
+       break;
+    case 2:
+       subtraction(a,b);
+       break;
+    case 3:
+       multiplication(a,b);
+       break;
+    case 4:
+       division(a,b);
+       break;
+    default:
+       printf("Choose an existing option");
+       break;
+    }
+    }
+    
+}
